@@ -14,19 +14,14 @@ public class AppTest {
 		WebDriver driver = new ChromeDriver();
         String eTitle = "Meet Guru99";
         String aTitle = "";
-        // launch Firefox and redirect it to the Base URL
         driver.get("http://www.guru99.com/");
-        //maximises the browser window
         driver.manage().window().maximize();
-        // get the actual value of the title
-        aTitle = driver.getTitle();
-        // compare the actual title  with the expected title 
+        aTitle = driver.getTitle(); 
         if (aTitle.contentEquals(eTitle)){
             System.out.println("Test Passed");
         } else {
             System.out.println("Test Failed");
         }        
-        //close Firefox browser
         driver.close();
 		
 	}
