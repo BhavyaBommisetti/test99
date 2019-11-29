@@ -4,7 +4,7 @@
 
   <groupId>guru</groupId>
   <artifactId>test99</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0</version>
   <packaging>jar</packaging>
 
   <name>test99</name>
