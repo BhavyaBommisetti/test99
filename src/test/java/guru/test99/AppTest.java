@@ -2,6 +2,8 @@ package guru.test99;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class AppTest {
@@ -11,7 +13,12 @@ public class AppTest {
   public void guru99tutorials() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
 		        "/usr/bin/chromedriver");
-		WebDriver driver = new ChromeDriver();
+	  ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		options.addArguments("--disable-gpu");
+		options.addArguments("window-size=1024,768");
+		options.addArguments("--no-sandbox");
+		WebDriver driver = new ChromeDriver(options);
         String eTitle = "Meet Guru99";
         String aTitle = "";
         driver.get("http://www.guru99.com/");
