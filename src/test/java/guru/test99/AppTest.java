@@ -19,7 +19,7 @@ public class AppTest {
 		options.addArguments("window-size=1024,768");
 		options.addArguments("--no-sandbox");
 		WebDriver driver = new ChromeDriver(options);
-        String eTitle = "Meet Guru99";
+       /* String eTitle = "Meet Guru99";
         String aTitle = "";
         driver.get("http://www.guru99.com/");
         driver.manage().window().maximize();
@@ -30,7 +30,24 @@ public class AppTest {
             System.out.println("Test Failed");
         }        
         driver.close();
+		*/
+	 
 		
+		driver.get("https://www.wikipedia.org/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		driver.findElement(By.id("searchInput")).sendkeys("wipro");
+		driver.findElement(By.className("pure-button")).click();
+		
+		String h= driver.getTitle();
+		String e= "wipro - wikipedia";
+		driver.close();
+		if(h.equalsIgnoreCase(e)){
+			System.out.println("pass");
+		}
+		else{
+			System.out.println("fail");
+		}
 	}
 }
 
