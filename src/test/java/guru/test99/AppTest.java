@@ -36,7 +36,7 @@ public class AppTest {
 		driver.get("https://www.wikipedia.org/");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
-		driver.findElement(By.id("searchInput")).sendkeys("wipro");
+		driver.findElement(By.id("searchInput")).sendKeys("wipro");
 		driver.findElement(By.className("pure-button")).click();
 		
 		String h= driver.getTitle();
